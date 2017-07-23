@@ -1,0 +1,22 @@
+bathroom_timer:
+  alias: "TIMER - Bathroom Light - 20 minutes"
+  sequence:
+    - delay:
+         minutes: 20
+    - service: homeassistant.turn_off
+      data: 
+        entity_id: light.bathroom
+
+bathroom_timer_execute:
+  alias: "MOTION LIGHTS - Bathroom"
+  sequence:
+    - service: script.turn_off
+      data:
+        entity_id: script.bathroom_timer
+    - service: homeassistant.turn_on
+      data:
+        entity_id: light.bathroom
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_timer
+

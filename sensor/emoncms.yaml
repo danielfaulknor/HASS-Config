@@ -1,0 +1,29 @@
+- platform: emoncms
+  api_key: 4f58a60e703d9fdcd34f8138f8653123
+  url: http://10.199.50.9
+  id: 1
+  unit_of_measurement: "W"
+  include_only_feed_id:
+    - 1
+  sensor_names:
+    1: "House Power"
+
+- platform: emoncms
+  api_key: 4f58a60e703d9fdcd34f8138f8653123
+  url: http://10.199.50.9
+  id: 2
+  unit_of_measurement: "V"
+  include_only_feed_id:
+    - 4
+  sensor_names:
+    4: "House Voltage"
+
+- platform: emoncms
+  api_key: 4f58a60e703d9fdcd34f8138f8653123
+  url: http://10.199.50.9
+  id: 3
+  unit_of_measurement: "C"
+  include_only_feed_id:
+    - 3
+  sensor_names:
+    3: "Outside Temperature"

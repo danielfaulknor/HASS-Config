@@ -1,0 +1,13 @@
+- platform: mqtt_room
+  device_id: e2c56db5dffb48d2b060d0f5a71096e0_0001_0000
+  name: "Dan Beacon"
+  state_topic: 'happy-bubbles/presence/ha'
+  timeout: 5
+  away_timeout: 0
+
+- platform: mqtt_room
+  device_id: e2c56db5dffb48d2b060d0f5a71096e0_0002_0000
+  name: "Becky Beacon"
+  state_topic: 'happy-bubbles/presence/ha'
+  timeout: 5
+  away_timeout: 0

@@ -1,0 +1,26 @@
+Lounge Lights:
+  entities:
+    - light.lounge_main
+    - switch.lounge_light_back
+    - switch.lounge_light_front
+    - switch.lounge_light_side
+
+Office Lights:
+  entities:
+    - light.office_bookshelf
+    - light.office_clip
+    - light.office_lamp
+    - light.office_room
+    - light.office_shelf
+
+Hallway Lights:
+  entities:
+    - light.hallway_back
+    - light.hallway_front
+
+Kitchen Lights:
+  entities:
+    - light.kitchen_1
+    - light.kitchen_2
+    - light.kitchen_3
+    - light.kitchen_4

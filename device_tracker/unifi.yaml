@@ -1,0 +1,6 @@
+- platform: unifi
+  host: 10.199.50.5
+  username: homeassistant
+  password: pukD3ibQ6RJ3v5tKwUz
+  verify_ssl: false
+  track_new_devices: false

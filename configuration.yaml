@@ -1,0 +1,103 @@
+homeassistant:
+  name: Home
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  elevation: !secret homeassistant_elevation
+  unit_system: metric
+  time_zone: Pacific/Auckland
+  packages: !include_dir_named packages
+  customize:
+    light.office_bookshelf:
+      persistent: true
+    light.office_clip:
+      persistent: true
+    light.office_lamp:
+      persistent: true
+    light.office_room:
+      persistent: true
+    light.office_shelf:
+      persistent: true
+    light.kitchen_1:
+      persistent: true
+    light.kitchen_2:
+      persistent: true
+    light.kitchen_3:
+      persistent: true
+    light.kitchen_4:
+      persistent: true
+
+frontend:
+config:
+http:
+  api_password: !secret http_password
+  base_url: !secret http_url
+
+updater:
+  include_used_components: true
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant
+  username: !secret MQTT_username
+  password: !secret MQTT_password
+
+light:
+  - platform: hue
+    host: !secret hue_ip
+    allow_unreachable: true
+    allow_in_emulated_hue: false
+    allow_hue_groups: false
+    filename: phue.conf
+
+  - platform: limitlessled
+    bridges:
+      - host: !secret limitlessled_studio
+        version: 2
+        port: 8899
+        groups:
+        - number: 1
+          name: "Office Bookshelf"
+          type: white
+        - number: 2
+          type: white
+          name: "Office Clip"
+        - number: 2
+          type: rgbw
+          name: "Office Shelf"
+        - number: 3
+          type: rgbw
+          name: "Office Lamp"
+        - number: 4
+          type: white
+          name: "Office Room"
+      - host: !secret limitlessled_lounge
+        groups:
+        - number: 1
+          name: "Kitchen 1"
+          type: rgbww
+        - number: 2
+          name: "Kitchen 2"
+          type: rgbww
+        - number: 3
+          name: "Kitchen 3"
+          type: rgbww
+        - number: 4
+          name: "Kitchen 4"
+          type: rgbww
+
+wemo:
+  static:
+    - 10.199.160.26
+    - 10.199.160.27
+    - 10.199.160.28
+    - 10.199.160.29
+    - 10.199.160.30
+
+logbook:
+sun:
+sensor: !include_dir_merge_list sensor
+device_tracker: !include_dir_merge_list device_tracker
+automation: !include_dir_merge_list automation
+group: !include_dir_merge_named group
+script: !include_dir_merge_named script
