@@ -1,0 +1,35 @@
+- platform: limitlessled
+  bridges:
+    - host: !secret limitlessled_studio
+      version: 2
+      port: 8899
+      groups:
+      - number: 1
+        name: "Office Bookshelf"
+        type: white
+      - number: 2
+        type: white
+        name: "Office Clip"
+      - number: 2
+        type: rgbw
+        name: "Office Shelf"
+      - number: 3
+        type: rgbw
+        name: "Office Lamp"
+      - number: 4
+        type: white
+        name: "Office Room"
+    - host: !secret limitlessled_lounge
+      groups:
+      - number: 1
+        name: "Kitchen 1"
+        type: rgbww
+      - number: 2
+        name: "Kitchen 2"
+        type: rgbww
+      - number: 3
+        name: "Kitchen 3"
+        type: rgbww
+      - number: 4
+        name: "Kitchen 4"
+        type: rgbww

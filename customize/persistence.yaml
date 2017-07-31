@@ -1,0 +1,18 @@
+light.office_bookshelf:
+  persistent: true
+light.office_clip:
+  persistent: true
+light.office_lamp:
+  persistent: true
+light.office_room:
+  persistent: true
+light.office_shelf:
+  persistent: true
+light.kitchen_1:
+  persistent: true
+light.kitchen_2:
+  persistent: true
+light.kitchen_3:
+  persistent: true
+light.kitchen_4:
+  persistent: true
