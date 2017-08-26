@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: Dryer Shed
+  state_topic: "rpidryer/lock_state"
+  command_topic: "rpidryer/lock"
+  payload_lock: "0"
+  payload_unlock: "1"
+  optimistic: false

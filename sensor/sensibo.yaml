@@ -1,0 +1,6 @@
+- platform: sensibosensor
+  # get your API key [https://home.sensibo.com/me/api](https://home.sensibo.com/me/api)
+  apiKey: !secret sensibo_apikey
+  # name - the name you gave your sensibo pod - must be identical to how it appears in the app
+  name: "Lounge"
+  scan_interval: 300

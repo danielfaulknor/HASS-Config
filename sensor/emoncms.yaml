@@ -1,6 +1,6 @@
 - platform: emoncms
   api_key: 4f58a60e703d9fdcd34f8138f8653123
-  url: http://10.199.50.9
+  url: http://10.199.50.21
   id: 1
   unit_of_measurement: "W"
   include_only_feed_id:
@@ -10,7 +10,7 @@
 
 - platform: emoncms
   api_key: 4f58a60e703d9fdcd34f8138f8653123
-  url: http://10.199.50.9
+  url: http://10.199.50.21
   id: 2
   unit_of_measurement: "V"
   include_only_feed_id:
@@ -20,9 +20,9 @@
 
 - platform: emoncms
   api_key: 4f58a60e703d9fdcd34f8138f8653123
-  url: http://10.199.50.9
+  url: http://10.199.50.21
   id: 3
-  unit_of_measurement: "C"
+  unit_of_measurement: "°C"
   include_only_feed_id:
     - 3
   sensor_names:

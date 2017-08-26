@@ -1,0 +1,14 @@
+- platform: mqtt
+  state_topic: "loungepi2/ds18b20_0"
+  unit_of_measurement: "°C"
+  name: Server Cupboard
+
+- platform: mqtt
+  state_topic: "/home/temperature/studio"
+  unit_of_measurement: "°C"
+  name: Studio Temperature
+
+- platform: mqtt
+  state_topic: "/home/humidity/studio"
+  unit_of_measurement: "%"
+  name: Studio Humidity

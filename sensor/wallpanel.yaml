@@ -1,0 +1,5 @@
+- platform: mqtt
+  state_topic: "wallpanel/wallpanel-lounge/sensor/battery"
+  name: "lounge panel battery"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.value }}'

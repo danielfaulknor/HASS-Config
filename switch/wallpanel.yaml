@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Lounge WallPanel"
+  command_topic: "wallpanel/wallpanel-lounge/command"
+  payload_on: "{'wake':true}"
+  payload_off: "{'wake':false}"
+  optimistic: false
+  retain: false

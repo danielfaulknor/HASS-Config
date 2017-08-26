@@ -1,0 +1,11 @@
+- platform: mqtt
+  command_topic: "/home/studio/lights/1"
+  name: Studio DMX Lights 1
+
+- platform: mqtt
+  command_topic: "/home/studio/lights/2"
+  name: Studio DMX Lights 2
+
+- platform: mqtt
+  command_topic: "/home/studio/lights/3"
+  name: Studio DMX Lights 3

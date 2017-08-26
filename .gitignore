@@ -22,3 +22,5 @@ pyozw.sqlite
 nest.conf
 .uuid
 ipchange.yaml
+__pycache__/
+*.py[cod]

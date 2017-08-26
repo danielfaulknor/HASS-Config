@@ -1,0 +1,5 @@
+- platform: mqtt
+  state_topic: "rpidryer/rfid"
+  name: rPiDryer RFID
+  payload_on: "1"
+  payload_off: "0"

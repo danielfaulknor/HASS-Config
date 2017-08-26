@@ -1,0 +1,17 @@
+climate.lounge:
+  friendly_name: 'Sensibo'
+  entity_picture: http://www.virtualida.com/wp-content/uploads/2016/10/sensibo.jpg
+  icon: mdi:air-conditioner
+#
+sensor.lounge_humidity:
+  friendly_name: 'Lounge Humidity'
+  icon: mdi:water
+#
+sensor.lounge_temperature:
+  friendly_name: 'Lounge Temperature'
+  icon: mdi:thermometer-lines 
+#
+switch.lounge:
+  friendly_name: 'Lounge AC'
+  icon: mdi:air-conditioner
+#

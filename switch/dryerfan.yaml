@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: "Dryer Extractor Fans"
+  command_topic: "rpidryer/fan"
+  payload_on: "1"
+  payload_off: "0"
+  optimistic: false
+  retain: false
+  state_topic: "rpidryer/fan_state"

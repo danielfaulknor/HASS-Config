@@ -8,9 +8,17 @@ homeassistant:
   packages: !include_dir_named packages
   customize: !include_dir_merge_named customize
 
+automation: !include automations.yaml
+
+binary_sensor: !include_dir_merge_list binary_sensor
+
 config:
 
+climate: !include_dir_merge_list climate
+
 device_tracker: !include_dir_merge_list device_tracker
+
+discovery:
 
 frontend:
 
@@ -21,6 +29,14 @@ http:
   base_url: !secret http_url
 
 light: !include_dir_merge_list light
+
+lock: !include_dir_merge_list lock
+
+logger:
+  default: error
+  logs:
+    homeassistant.components.wemo: debug
+    homeassistant.components.climate: info
 
 mqtt:
   broker: 127.0.0.1
@@ -33,15 +49,11 @@ prometheus:
 
 sensor: !include_dir_merge_list sensor
 
+switch: !include_dir_merge_list switch
+
 sun:
 
 updater:
   include_used_components: true
 
 wemo:
-  static:
-    - 10.199.160.26
-    - 10.199.160.27
-    - 10.199.160.28
-    - 10.199.160.29
-    - 10.199.160.30

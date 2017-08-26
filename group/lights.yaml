@@ -5,13 +5,19 @@ Lounge Lights:
     - switch.lounge_light_front
     - switch.lounge_light_side
 
-Office Lights:
+Studio Lights:
   entities:
     - light.office_bookshelf
     - light.office_clip
     - light.office_lamp
     - light.office_room
     - light.office_shelf
+
+Studio DMX Lights:
+  entities:
+    - switch.studio_dmx_lights_1
+    - switch.studio_dmx_lights_2
+    - switch.studio_dmx_lights_3
 
 Hallway Lights:
   entities:
