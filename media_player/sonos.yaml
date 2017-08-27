@@ -1,0 +1,2 @@
+- platform: sonos
+  interface_addr: 10.199.50.35

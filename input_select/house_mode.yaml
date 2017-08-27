@@ -1,0 +1,5 @@
+house_mode:
+  options:
+    - Awake
+    - Asleep Partial
+    - Asleep

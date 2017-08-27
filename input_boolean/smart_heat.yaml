@@ -1,0 +1,7 @@
+smart_heat:
+  name: Smart heat
+  initial: on
+
+guest_mode:
+  name: Guest Mode
+  initial: off

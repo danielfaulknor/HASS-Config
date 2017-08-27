@@ -1,2 +1,2 @@
 - platform: sensibo
-  apiKey: !secret sensibo_apikey
+  api_key: !secret sensibo_apikey

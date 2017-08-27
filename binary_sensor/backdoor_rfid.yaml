@@ -1,0 +1,5 @@
+- platform: mqtt
+  state_topic: "backdoor/rfid"
+  name: Back Door RFID
+  payload_on: "1"
+  payload_off: "0"

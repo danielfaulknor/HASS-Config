@@ -1,0 +1,3 @@
+input_boolean.backdoor_lock:
+  homebridge_visible: true
+

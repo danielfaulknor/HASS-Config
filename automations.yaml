@@ -9,40 +9,39 @@
   - data:
       entity_id: lock.dryer_shed
     service: lock.unlock
-
-- id: control_light_brightness
-  alias: detect lights and adjust the brightness when turned on based on time
+- id: back_door_rfid
+  alias: Back Door RFID
   trigger:
-    - platform: event
-      event_type: state_changed
-  
-  condition:
-    - condition: state
-      entity_id: input_boolean.alert_mode
-      state: 'off'
-    - condition: template
-      value_template: "{{ trigger.event.data is not none }}"
-    - condition: template
-      value_template: "{{ trigger.event.data.entity_id is not none }}"
-    - condition: template
-      value_template: "{{ trigger.event.data.entity_id.split('.')[0] == 'light' }}"
-    - condition: template
-      value_template: "{{ trigger.event.data.new_state.state == 'on' }}"
-    - condition: template
-      value_template: "{{ trigger.event.data.old_state.state == 'off' }}"
-   
+  - entity_id: binary_sensor.back_door_rfid
+    from: 'off'
+    platform: state
+    to: 'on'
   action:
-    - service: light.turn_on
-      data_template:
-        entity_id: "{{ trigger.event.data.entity_id }}"
-        brightness: >
-          {% set hour=states("sensor.time").split(':')[0] | int %}
-          {%- if hour >= 5 and hour < 8  -%}
-            50
-          {%- elif hour >= 8 and hour <20  -%}
-            255
-          {%- elif hour >= 20 and hour <24  -%}
-            40  
-          {%- else -%}
-            15
-          {%- endif %}
+  - data:
+      entity_id: input_boolean.backdoor_lock
+    service: input_boolean.toggle
+- action:
+  - data:
+      entity_id: light.beckys_office
+    service: light.toggle
+  alias: Flic - Becky Office - Single
+  id: '1503804756412'
+  trigger:
+  - event_data:
+      button_name: flic_80e4da721720
+      click_type: single
+    event_type: flic_click
+    platform: event
+- action:
+  - data:
+      entity_id: light.spare_room
+    service: light.toggle
+  alias: Flic - Spare Room - Single
+  condition: []
+  id: '1503824877416'
+  trigger:
+  - event_data:
+      button_name: flic_80e4da720fb5
+      click_type: single
+    event_type: flic_click
+    platform: event
