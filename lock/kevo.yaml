@@ -1,3 +1,0 @@
-- platform: kevo
-  email: !secret kevo_user
-  password: !secret kevo_password

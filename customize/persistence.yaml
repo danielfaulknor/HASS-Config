@@ -16,11 +16,11 @@ light.kitchen_3:
   persistent: true
 light.kitchen_4:
   persistent: true
-input_boolean.backdoor_lock
+input_boolean.backdoor_lock:
   persistent: true
-input_boolean.guest_mode
+input_boolean.guest_mode:
   persistent: true
-input_boolean.smart_heat
+input_boolean.smart_heat:
   persistent: true
-input_select.house_mode
+input_select.house_mode:
   persistent: true

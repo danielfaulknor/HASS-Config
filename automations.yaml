@@ -45,3 +45,14 @@
       click_type: single
     event_type: flic_click
     platform: event
+- action:
+  - data:
+      entity_id: sensor.motion_lounge_countdown
+    service: input_boolean.turn_on
+  alias: Motion Lounge Daytime Indicator
+  condition: []
+  id: '1503833476845'
+  trigger:
+  - above: '0'
+    entity_id: sensor.motion_lounge_countdown
+    platform: numeric_state

@@ -6,7 +6,7 @@ homeassistant:
   unit_system: metric
   time_zone: Pacific/Auckland
   packages: !include_dir_named packages
-  customize: !include_dir_merge_named customize
+  customize: !include customize.yaml
 
 automation: !include automations.yaml
 
@@ -30,9 +30,16 @@ history:
       - automation
       - weblink
       - updater
+      - device_tracker
     entities:
-      - sensor.last_boot
-      - sensor.date
+      - sensor.motion_bathroom_countdown
+      - sensor.motion_dryershed_countdown
+      - sensor.motion_lounge_countdown
+      - sensor.motion_lounge_countdown
+      - sensor.motion_lounge_night_countdown
+      - sensor.motion_lounge_wallpanel_countdown
+      - sensor.becky_beacon
+      - sensor.dan_beacon
 
 http:
   api_password: !secret http_password
@@ -64,7 +71,8 @@ mqtt:
 prometheus:
 
 recorder:
-  purge_days: 90
+  purge_interval: 2
+  purge_keep_days: 90
   db_url: !secret recorder_db
   exclude:
     domains:

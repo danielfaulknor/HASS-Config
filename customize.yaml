@@ -1,0 +1,11 @@
+input_boolean.backdoor_lock: {}
+binary_sensor.back_door_rfid:
+  homebridge_hidden: true
+automation.back_door_rfid:
+  homebridge_hidden: true
+binary_sensor.bathroom_motion:
+  homebridge_hidden: true
+sensor.becky_beacon:
+  homebridge_hidden: true
+device_tracker.beckysmbp2:
+  homebridge_hidden: true

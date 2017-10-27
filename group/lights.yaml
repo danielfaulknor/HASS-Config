@@ -4,6 +4,7 @@ Lounge Lights:
     - switch.lounge_light_back
     - switch.lounge_light_front
     - switch.lounge_light_side
+    - input_boolean.lounge_daytime_timer
 
 Studio Lights:
   entities:
